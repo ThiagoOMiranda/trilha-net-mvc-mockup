@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font Awesome CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!--CSS-->
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+
+    <!--Favicon-->
+    <link href="./assets/img/favicon.svg" rel="icon" type="image/x-icon">
+    <title>To-do List - Mockup</title>
+</head>
+
+<body>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light border-bottom shadow-sm mb-5">
+            <div class="container px-4">
+                <div
+                    class="title-wrapper d-flex align-items-center justify-content-between rounded-pill p-2 bg-white link-light shadow-sm">
+                    <i
+                        class="icon-title fa-solid fa-list-check fa-lg rounded-circle shadow-sm d-flex align-items-center justify-content-center"></i>
+                    <a href="#" class="text-decoration-none pe-none">
+                        <h5 class="navbar-brand fs-5 mx-2 fw-bold m-0 sp-0 text-nowrap text-secondary">TO-DO LIST</h5>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="ps-3 navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a href="./Index.html" class="nav-link text-secondary">Agenda de Tarefas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./About.html" class="nav-link text-secondary">Sobre</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container h-100 d-flex flex-column justify-content-center">
+        <main class="m-auto w-100">
+            <div
+                class="d-flex justify-content-center align-items-center shadow-sm text-white bg-info mb-2 p-1 rounded-2 border-bottom border-3">
+                <h3 class="fw-bold text-shadow m-auto">Agenda de Tarefas:</h3>
+            </div>
+
+            <div class="container overflow-auto container-max bg-light rounded-2 shadow p-3">
+                <div class="d-flex py-2 justify-content-center rounded-2 bg-white shadow-sm mb-2">
+                    <a href="./Criar.html"
+                        class="text-decoration-none me-2 btn btn-menu hover bg-info rounded-2 shadow-sm d-flex text-light"
+                        data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Nova Tarefa">
+                        <i class="m-auto fa-solid fa-file-circle-plus fa-xl"></i>
+                    </a>
+                    <!-- <a href="#"
+                        class="text-decoration-none me-2 btn btn-menu hover bg-info rounded-2 shadow-sm d-flex text-light"
+                        data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Ordenar por Id">
+                        <i class="m-auto fa-solid fa-arrow-down-1-9 fa-xl"></i>
+                    </a> -->
+                    <button type="button" id="order-id"
+                        class="text-decoration-none me-2 btn btn-menu hover bg-info rounded-2 shadow-sm d-flex text-light"
+                        data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Ordenar por Id">
+                        <i class="m-auto pe-none fa-solid fa-arrow-down-1-9 fa-xl"></i>
+                    </button>
+                    <!-- <a href="#"
+                        class="text-decoration-none me-2 btn btn-menu hover bg-info rounded-2 shadow-sm d-flex text-light"
+                        data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Ordenar por Título">
+                        <i class="m-auto fa-solid fa-arrow-down-a-z fa-xl"></i>
+                    </a> -->
+                    <button type="button" id="order-az"
+                        class="text-decoration-none me-2 btn btn-menu hover bg-info rounded-2 shadow-sm d-flex text-light"
+                        data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Ordenar por Título">
+                        <i class="m-auto fa-solid fa-arrow-down-a-z fa-xl"></i>
+                    </button>
+                    <!-- <a href="#"
+                        class="text-decoration-none btn btn-menu hover bg-info rounded-2 shadow-sm d-flex text-light"
+                        data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Ordenar por Data">
+                        <i class="m-auto fa-regular fa-calendar fa-xl"></i>
+                    </a> -->
+                    <button type="button" id="order-date"
+                        class="text-decoration-none btn btn-menu hover bg-info rounded-2 shadow-sm d-flex text-light"
+                        data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Ordenar por Data">
+                        <i class="m-auto fa-regular fa-calendar fa-xl"></i>
+                    </button>
+
+                    <div class="spacer mx-3"></div>
+
+                    <!-- <a href="#"
+                        class="text-decoration-none me-2 btn btn-menu hover bg-info rounded-2 shadow-sm d-flex text-light"
+                        data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Exibir todos">
+                        <i class="m-auto fa-solid fa-list-ul fa-xl"></i>
+                    </a> -->
+
+                    <button type="button" id="show-all"
+                        class="text-decoration-none me-2 btn btn-menu hover bg-info rounded-2 shadow-sm d-flex text-light"
+                        data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Exibir todos"><i
+                            class="m-auto fa-solid fa-list-ul fa-xl"></i></button>
+
+                    <div class="my-auto input-group pe-2 w-20">
+                        <input type="text" id="filter-string" class="form-control"
+                            placeholder=" Filtrar por palavra-chave">
+                        <button type="submit" id="btn-filter-string"
+                            class="m-auto btn btn-menu btn-info hover text-light shadow-sm" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" data-bs-title="Filtrar por palavra-chave">
+                            <i class="fa-solid pe-none fa-magnifying-glass fa-xl"></i></button>
+                    </div>
+
+                    <div class="my-auto input-group pe-2 w-17">
+                        <input type="date" id="filter-date" class="form-control form-group-style"
+                            placeholder=" Filtrar por Data">
+                        <button type="submit" id="btn-filter-date"
+                            class="m-auto btn btn-menu btn-info hover text-light shadow-sm" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" data-bs-title="Filtrar por data">
+                            <i class="fa-solid pe-none fa-calendar-days fa-xl"></i></button>
+                    </div>
+
+                    <div class="my-auto input-group pe-2 w-17">
+                        <select class="form-select form-group-style" id="select-priority">
+                            <option selected>Prioridade</option>
+                            <option value="1">Mínima</option>
+                            <option value="2">Média</option>
+                            <option value="3">Máxima</option>
+                            <option value="4">Urgente</option>
+                        </select>
+                        <button type="submit" id="btn-priority"
+                            class="m-auto btn btn-menu btn-info hover text-light shadow-sm" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" data-bs-title="Filtrar por Prioridade">
+                            <i class="fa-solid fa-chart-simple fa-xl"></i></button>
+                    </div>
+
+                    <div class="my-auto input-group w-17">
+                        <select class="form-select form-group-style" id="select-status">
+                            <option selected>Status</option>
+                            <option value="1">Pendente</option>
+                            <option value="2">Finalizado</option>
+                        </select>
+                        <button type="submit" id="btn-status"
+                            class="m-auto btn btn-menu btn-info hover text-light shadow-sm" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" data-bs-title="Filtrar por Status">
+                            <i class="fa-solid fa-chart-simple fa-xl"></i></button>
+                    </div>
+                </div>
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="navbar-table">
+                        <tr class="text-center">
+                            <th class="col-sm-0 border-end border-1">
+                                Id
+                            </th>
+                            <th class="col-sm-2 border-end border-1">
+                                Título
+                            </th>
+                            <th class="col-sm-5 border-end border-1">
+                                Descrição
+                            </th>
+                            <th class="col-sm-1 border-end border-1">
+                                Prioridade
+                            </th>
+                            <th class="col-sm-2 border-end border-1">
+                                Data de Início
+                            </th>
+                            <th class="col-sm-1">
+                                Status
+                            </th>
+                            <th class="col-sm-1"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <footer
+        class="footer fixed-bottom navbar rounded-top p-2 w-75 start-50 translate-middle-x border-top text-muted bg-light">
+        <div class="container d-flex justify-content-center">
+            <p class="my-auto mx-4">&copy; 2022 - Desafio DIO Trilha .NET - API, Entity e MVC</p>
+            <p class="my-auto mx-4">Desenvolvido por: <i>Thiago de Oliveira Miranda</i></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

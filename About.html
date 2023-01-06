@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font Awesome CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!--CSS-->
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+
+    <!--Favicon-->
+    <link href="./assets/img/favicon.svg" rel="icon" type="image/x-icon">
+    <title>To-do List - Mockup</title>
+</head>
+
+<body>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light border-bottom shadow-sm mb-5">
+            <div class="container px-4">
+                <div
+                    class="title-wrapper d-flex align-items-center justify-content-between rounded-pill p-2 bg-white link-light shadow-sm">
+                    <i
+                        class="icon-title fa-solid fa-list-check fa-lg rounded-circle shadow-sm d-flex align-items-center justify-content-center"></i>
+                    <a href="#" class="text-decoration-none pe-none">
+                        <h5 class="navbar-brand fs-5 mx-2 fw-bold m-0 sp-0 text-nowrap text-secondary">TO-DO LIST</h5>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="ps-3 navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a href="./Index.html" class="nav-link text-secondary">Agenda de Tarefas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./About.html" class="nav-link text-secondary">Sobre</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container h-100 d-flex flex-column justify-content-center">
+        <main class="m-auto">
+            <h2 class="text-white text-shadow mb-3 text-center">Sobre o desafio:</h2>
+
+            <div class="container-max w-75 m-auto overflow-auto d-flex flex-column bg-light p-5 rounded-3 shadow">
+                <h3 class="fw-bold pb-2 mb-4 border-bottom border-2">DIO - Trilha .NET - API e Entity Framework</h3>
+                <h4 class="fw-bold mb-2">Descrição do desafio:</h4>
+
+                <p class="pb-4 mb-4 border-bottom border-2">&emsp;&emsp;Para esse desafio, foram utilizados os
+                    conhecimentos
+                    adquiridos
+                    no módulo <b>API e Entity Framework</b>, da trilha <b>.NET</b> da <b><i>DIO (Digital Innovation
+                            One</i>)</b>.
+                </p>
+
+                <h4 class="fw-bold mb-2">Contexto:</h4>
+
+                <p class="pb-4 mb-4 border-bottom border-2">&emsp;&emsp;Construir um <i>sistema gerenciador de
+                        tarefas</i>,
+                    onde poderá
+                    ser agendado com atributos uma lista de tarefas para melhor organizar a rotina. Essa lista de
+                    tarefas precisa
+                    ter um <b><i>CRUD (Create, Read, Update and Delete)</i></b>, ou seja, deverá permitir criar, editar
+                    e deletar
+                    registros. A aplicação implementada foi uma <b><i>MVC (Model, View and Controller)</i></b>.</p>
+
+                <h5 class="fw-bold mb-3">Classe principal da tarefa:</h5>
+
+                <img src="./assets/img/diagrama.png" class="m-auto mb-2" width="40%" alt="Diagrama de Classes" />
+
+                <i class="m-auto mb-3">Figura 01: Diagrama da classe tarefa</i>
+
+                <p class="pb-4 mb-4 border-bottom border-2">&emsp;&emsp;Foi adicionado, com fins didáticos a propriedade
+                    <i>Enum</i>:
+                    <b>Prioridade</b>. A qual categoriza o nível de prioridade da tarefa nas seguintes classificações:
+                    <b><i>mínima,
+                            média, máxima e urgente</i></b>.
+                </p>
+
+                <h4 class="fw-bold mb-3">Métodos implementados:</h4>
+
+                <img src="./assets/img/metodos.png" class="m-auto mb-2" width="80%" alt="Diagrama de Classes" />
+
+                <i class="m-auto mb-3">Figura 02: Listagem dos métodos principais da Controller</i>
+
+                <p>&emsp;&emsp;<b>Criar, Editar, Deletar e Detalhes:</b> Contemplam as funções básicas
+                    de um CRUD,
+                    trocando dados
+                    com requisições ao <i>sqlserver</i> através da migration.</p>
+
+                <ul class="pb-4 mb-4 border-bottom border-2">
+                    <p><b>Index:</b> Inseridas no método principal, as ações:</p>
+                    <li class="pb-1"><b><i>sortOrder:</i></b> Consiste nos critérios de ordenação através do
+                        <b><i>ViewBag</i></b>
+                        classificados em: <b>ordenar por Id, Título e Data</b>.
+                    </li>
+
+                    <li><b><i>searchString, SearchDate, searchPriority, searchStatus:</i></b> Lógica implementada para
+                        filtrar as
+                        tarefas por: <b>palavras-chave <i>(searchString)</i></b>, <b>data <i>(searchDate)</i></b>,
+                        <b>prioridade
+                            <i>(searchPriority)</i></b> e <b>status <i>(searchStatus)</i></b>.
+                    </li>
+                </ul>
+
+                <h4 class="fw-bold mb-3">Interface do usuário:</h4>
+
+                <img src="./assets/img/telaIndex.png" class="m-auto mb-2" width="90%" alt="Diagrama de Classes" />
+
+                <i class="m-auto mb-4">Figura 03: Tela principal do agendador de tarefas</i>
+
+                <img src="./assets/img/telaCriar.png" class="m-auto mb-2" width="90%" alt="Diagrama de Classes" />
+
+                <i class="m-auto mb-4">Figura 04: Tela de criação de tarefas</i>
+
+                <img src="./assets/img/telaEditar.png" class="m-auto mb-2" width="90%" alt="Diagrama de Classes" />
+
+                <i class="m-auto mb-4">Figura 05: Tela de edição de tarefas</i>
+
+                <img src="./assets/img/telaDetalhes.png" class="m-auto mb-2" width="90%" alt="Diagrama de Classes" />
+
+                <i class="m-auto mb-4">Figura 06: Tela de detalhes das tarefas</i>
+
+                <img src="./assets/img/telaDeletar.png" class="m-auto mb-2" width="90%" alt="Diagrama de Classes" />
+
+                <i class="m-auto">Figura 07: Tela de deleção de tarefas</i>
+
+            </div>
+        </main>
+    </div>
+
+    <footer
+        class="footer fixed-bottom navbar rounded-top p-2 w-75 start-50 translate-middle-x border-top text-muted bg-light">
+        <div class="container d-flex justify-content-center">
+            <p class="my-auto mx-4">&copy; 2022 - Desafio DIO Trilha .NET - API, Entity e MVC</p>
+            <p class="my-auto mx-4">Desenvolvido por: <i>Thiago de Oliveira Miranda</i></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
