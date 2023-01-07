@@ -408,7 +408,7 @@ function create(element) {
         data-bs-placement="bottom"
         data-bs-title="Deletar"
         id="task${element.id}-del"
-        form action = "./Deletar.html"
+        form action = "./deletar.html"
       >
         <i class="fa-solid pe-none fa-trash fa-lg mx-1"></i>
       </button>
@@ -453,11 +453,11 @@ let contentMenu = () => {
 
       saveStorage("thisTask", thisTask);
       if (String(elementId).includes("edit")) {
-        location.href = "./Editar.html";
+        location.href = "./editar.html";
       } else if (String(elementId).includes("show")) {
-        location.href = "./Detalhes.html";
+        location.href = "./detalhes.html";
       } else if (String(elementId).includes("del")) {
-        location.href = "./Deletar.html";
+        location.href = "./deletar.html";
       }
     });
   });
