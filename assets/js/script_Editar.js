@@ -143,7 +143,7 @@ window.onload = function () {
         );
 
         saveStorage("editTask", task);
-        location.href = "./Index.html";
+        location.href = "./index.html";
         sessionStorage.setItem("reload", true);
       } else {
         alert("Por favor preencha, todos os campos!");
