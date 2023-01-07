@@ -112,7 +112,7 @@ submitInput.addEventListener("click", function () {
     );
 
     saveStorage("myTask", task);
-    location.href = "./Index.html";
+    location.href = "./index.html";
     sessionStorage.setItem("isCreate", true);
     sessionStorage.setItem("isEdit", false);
     sessionStorage.setItem("isDelete", false);
