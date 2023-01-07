@@ -102,7 +102,7 @@ window.onload = function () {
       sessionStorage.setItem("isDelete", true);
       sessionStorage.setItem("isEdit", false);
       sessionStorage.setItem("isCreate", false);
-      location.href = "./Index.html";
+      location.href = "./index.html";
     });
   }
 };
